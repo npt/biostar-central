@@ -84,6 +84,8 @@ def shortcuts(request):
         'USE_COMPRESSOR': settings.USE_COMPRESSOR,
         'COUNTS': request.session.get(settings.SESSION_KEY, {}),
         'SITE_ADMINS': settings.ADMINS,
+        'ADMIN_EMAIL': settings.ADMIN_EMAIL,
+        'ADMIN_NAME': settings.ADMIN_NAME,
         'TOP_BANNER': settings.TOP_BANNER,
         'BANNER_TRIGGER': banner_trigger(request),
     }

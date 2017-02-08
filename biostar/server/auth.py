@@ -1,6 +1,13 @@
+from django.conf import settings
+
 from biostar.apps.users.models import User
 
+from allauth.account.adapter import DefaultAccountAdapter
 from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
+
+class PrivacyAdapter(DefaultAccountAdapter):
+    def is_open_for_signup(self, request):
+        return not settings.PRIVATE_SITE
 
 class AutoSignupAdapter(DefaultSocialAccountAdapter):
     def pre_social_login(self, request, sociallogin):

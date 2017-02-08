@@ -1,0 +1,30 @@
+{% extends "starbase.html" %}
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{% block page_title %}
+    Sign Up Closed
+{% endblock %}
+{% block content %}
+    <div class="row">
+
+        <div class="col-md-6 col-md-offset-3" style="padding-top:2em">
+
+            <div class="panel panel-default">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">{% trans "Sign Up Closed" %}</h3>
+                </div>
+
+                <div class="panel-body">
+
+                    Signup is closed to the public.
+                    Please contact the admin: <a href="mailto:{{ ADMIN_EMAIL }}">{{ ADMIN_NAME }}</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
