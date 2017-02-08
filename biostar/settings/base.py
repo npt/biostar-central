@@ -18,6 +18,9 @@ TEMPLATE_DEBUG = DEBUG
 # Should the django compressor be used.
 USE_COMPRESSOR = False
 
+# Make the site private.
+PRIVATE_SITE = True
+
 # The start categories. These tags have special meaning internally.
 START_CATEGORIES = [
     "Latest", "Open",
@@ -243,6 +246,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'biostar.server.middleware.private.MakePrivate',
     'biostar.server.middleware.visit.Visit',
 )
 
