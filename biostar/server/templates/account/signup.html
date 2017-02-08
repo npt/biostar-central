@@ -8,15 +8,15 @@
 {% block content %}
     <div class="row">
 
-        <div class="col-md-6 col-md-offset-3">
+        <div class="col-md-6 col-md-offset-3" style="padding-top:2em">
 
-            <div class="panel panel-default" style="margin-top:2em">
+            {% if socialaccount.providers %}
+                <div class="panel panel-default">
 
-                <div class="panel-heading">
-                    <h3 class="panel-title">{% trans "Social Signup" %}</h3>
-                </div>
-                <div class="panel-body">
-                    {% if socialaccount.providers %}
+                    <div class="panel-heading">
+                        <h3 class="panel-title">{% trans "Social Signup" %}</h3>
+                    </div>
+                    <div class="panel-body">
                         <p>{% blocktrans with site.name as site_name %}
                             Click the name of a provider to sign up.{% endblocktrans %}</p>
                         <div class="socialaccount_ballot">
@@ -25,16 +25,16 @@
                             </ul>
                         </div>
                         {% include "socialaccount/snippets/login_extra.html" %}
-                    {% endif %}
 
 
-                    <div>
-                        This is used for authentication only.
-                        We can't access your timeline, see your friends or post on your behalf.
+                        <div>
+                            This is used for authentication only.
+                            We can't access your timeline, see your friends or post on your behalf.
+                        </div>
+
                     </div>
-
                 </div>
-            </div>
+            {% endif %}
 
             <div class="panel panel-default">
 
