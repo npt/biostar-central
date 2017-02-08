@@ -1,10 +1,6 @@
 ## Biostar: Building Scientific Communities
 
-[![Build Status][build-image]][build-url] 
 [![License](http://img.shields.io/:license-mit-blue.svg)](http://doge.mit-license.org)
-
-[build-image]: https://travis-ci.org/ialbert/biostar-central.svg?branch=4.0
-[build-url]: https://travis-ci.org/ialbert/biostar-central/builds
 
 BioStar is a [Python][python] and [Django][django] based Q&A software.
 It is a simple, generic, flexible and extensible Q&A framework.
