@@ -309,7 +309,6 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'allauth.socialaccount.providers.persona',
     #'allauth.socialaccount.providers.google',
     #'allauth.socialaccount.providers.github',
     # 'allauth.socialaccount.providers.facebook',
@@ -395,10 +394,6 @@ SOCIALACCOUNT_PROVIDERS = {
     #    'PROVIDER_KEY': get_env("FACEBOOK_PROVIDER_KEY"),
     #    'PROVIDER_SECRET_KEY': get_env("FACEBOOK_PROVIDER_SECRET_KEY"),
     # },
-
-    'persona': {
-        'REQUEST_PARAMETERS': {'siteName': 'Biostar'}
-    },
 
     # 'github': {
     #    'SCOPE': ['email'],
