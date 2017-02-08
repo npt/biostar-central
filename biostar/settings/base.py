@@ -243,7 +243,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
-    'biostar.server.middleware.Visit',
+    'biostar.server.middleware.visit.Visit',
 )
 
 ROOT_URLCONF = 'biostar.urls'
@@ -356,7 +356,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 AUTHENTICATION_BACKENDS = (
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
-    "biostar.server.middleware.ExternalAuth",
+    "biostar.server.auth.ExternalAuth",
 )
 
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
@@ -378,7 +378,7 @@ MAX_POSTS_TRUSTED_USER = 30
 MAX_TOP_POSTS_NEW_USER = 2
 MAX_TOP_POSTS_TRUSTED_USER = 5
 
-SOCIALACCOUNT_ADAPTER = 'biostar.server.middleware.AutoSignupAdapter'
+SOCIALACCOUNT_ADAPTER = 'biostar.server.auth.AutoSignupAdapter'
 
 # Customize this to match the providers listed in the APPs
 SOCIALACCOUNT_PROVIDERS = {
